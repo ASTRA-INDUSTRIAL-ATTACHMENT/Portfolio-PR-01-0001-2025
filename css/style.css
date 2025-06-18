@@ -1,8 +1,8 @@
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
-  color: #111;
+ background-image:url('/images/background.jpg'); 
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
 }
 body.dark {
   background-color: #111;
@@ -15,7 +15,6 @@ header {
   align-items: left;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #445ea5;
   color: white;
 }
 .dark header {
@@ -57,8 +56,8 @@ body.dark .nav-btn {
 
 .about {
   padding: 2rem;
-  background-color: #496284;
   border-radius: 10px;
+  color: #f9f9f9;
 }
 .about:hover {
   background-color: #3345b0;
@@ -77,10 +76,9 @@ body.dark .nav-btn {
 
 .projects {
   padding: 2rem;
-  background-color: #3a6aa9;
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
   align-items: left;
   gap: 1rem;
 }
@@ -92,7 +90,9 @@ body.dark .nav-btn {
   color: #fff;
 }
 .project-card {
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #f9f9f9;
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -109,8 +109,8 @@ body.dark .nav-btn {
 
 .resume {
   padding: 2rem;
-  background-color: #2b4a7d;
   border-radius: 10px;
+  color: #f9f9f9;
 }
 .resume:hover {
   background-color: #3345b0;
@@ -127,11 +127,11 @@ body.dark .nav-btn {
 
 
 .contacts {
+  color: #f9f9f9;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
-  background-color: #1e3859;
   border-radius: 10px;
 }
 .contacts:hover {
