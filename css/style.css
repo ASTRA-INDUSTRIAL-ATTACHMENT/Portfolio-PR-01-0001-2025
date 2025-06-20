@@ -17,7 +17,7 @@ a {
 }
 
 .dark header {
-  background-color: #383434;
+  background-color: transparent;
   color: #f9f9f9;
 }
 
@@ -44,7 +44,7 @@ a {
   transform: scale(1.30);
 }
 .dark .nav-btn {
-  background-color: #333;
+  background-color: transparent;
   color: #fff;
 }
 
@@ -71,8 +71,14 @@ a {
   object-fit: cover;
 }
 .dark .about {
-  background-color: #333;
+  background-color: transparent;
   color: #fff;
+}
+.dark .about:hover {
+  background-color: #4046ed2d;
+  color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
 }
 
 
@@ -90,12 +96,12 @@ a {
   margin-bottom: 2rem;
 }
 .projects:hover {
-  background-color: #0101102d;
+  background-color: #4046ed2d;
   transform : scale(1.03);
   box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
 }
 .dark .projects {
-  background-color: #333;
+  background-color: transparent;
   color: #fff;
 }
 .project-card {
@@ -108,14 +114,56 @@ a {
   cursor: pointer;
 }
 .project-card:hover {
+ background-color: #3339eb32;
  transform: scale(1.04);
  box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
+}
+.dark .project-card {
+  background-color: transparent;
+  color: #fff;
 }
 .project-image {
   width: 100px;
   height: 100px;
   border-radius: 10px;
   object-fit: cover;
+}
+.dark .projects:hover {
+  background-color: #4046ed2d;
+  color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
+}
+.dark .project-card:hover {
+  background-color: #4046ed2d;
+  color: #fff;
+  transform: scale(1.04);
+  box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
+}
+
+.skills {
+  height: 70%;
+  width: 50%;
+  padding: 2rem;
+  border-radius: 10px;
+  color: #443a3a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+.skills:hover {
+  background-color: #4046ed2d;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
+}
+.dark .skills {
+  background-color: transparent;
+  color: #fff;
+}
+.dark .skills:hover {
+  background-color: #4046ed2d;
+  color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
 }
 
 .resume {
@@ -128,12 +176,19 @@ a {
   margin-bottom: 2rem;
 }
 .resume:hover {
+ background-color: #4046ed2d;
  transform: scale(1.03);
  box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
 }
 .dark .resume {
-  background-color: #333;
+  background-color: transparent;
   color: #fff;
+}
+.dark .resume:hover {
+  background-color: #4046ed2d;
+  color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
 }
 .resume-content {
   display: flex;
@@ -154,13 +209,21 @@ a {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .contacts:hover {
+  background-color: #4046ed2d;
   transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
 }
 .dark .contacts {
-  background-color: #333;
+  background-color: transparent;
   color: #fff;
 }
+.dark .contacts:hover {
+  background-color: #4046ed2d;
+  color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
+}
+
 .socials {
   width: 40%;
   display: flex;
@@ -175,6 +238,7 @@ a {
   cursor: pointer;
 }
 .socials:hover {
+  background-color: #3339eb32;
   transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
 }
@@ -183,4 +247,8 @@ a {
   width: 50px;
   height: 50px;
   object-fit: cover;
+}
+.dark footer{
+  background-color: transparent;
+  color: #fff;
 }
