@@ -3,52 +3,64 @@
 
 <head>
    <title>Joy's Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <header>
-      <main class="menu"> <!-- Main menu for navigation -->
-    
-    <button class="nav-btn" onclick="scrollToSection('about')">About Me</button>
-    <button class="nav-btn" onclick="scrollToSection('projects')">Projects</button>
-    <button class="nav-btn" onclick="scrollToSection('resume')">Resume</button>
-    <button class="nav-btn" onclick="scrollToSection('contacts')">Contacts</button>
-    <button class="nav-btn" onclick="scrollToSection('home')">Home</button>
-    <button class="nav-btn" id="darkToggle">Darkmode</button>
-    
-    </main>
+    <div class="nav-wrapper">
+      <nav class="menu"> <!-- Main menu for navigation -->
+        <a class="nav-btn" href="#about">About Me</a>
+        <a class="nav-btn" href="#projects">Projects</a>
+        <a class="nav-btn" href="#resume">Resume</a>
+        <a class="nav-btn" href="#contacts">Contacts</a>
+        <button class="nav-btn" id="darkToggle"><i class="fas fa-moon"></i></button>
+      </nav>
+    </div>
   </header>
 
-  <section class="about" id="about"> <!-- About Me section -->
+ <section class="about" id="about"> <!-- About Me section -->
     <img src="images/profilePhoto.jpg" alt="Joy's Photo" class="profile-photo">
     <h1>About Me</h1>
     <p>Hi, I'm Joy! I'm a computer science student with a passion for creating innovative solutions. I love coding, learning new technologies, and collaborating with others to build amazing projects.
-      My carreer goal is to become a full-stack developer and work on exciting projects that make a difference in people's lives. I enjoy problem-solving and am always eager to learn new skills and technologies.
+      My career goal is to become a full-stack developer and work on exciting projects that make a difference in people's lives. I enjoy problem-solving and am always eager to learn new skills and technologies.
       In my free time, I like to explore new programming languages, contribute to open-source projects, and stay updated with the latest trends in technology.
     </p>
     <p>Feel free to reach out.</p>
-  </section>
+ </section>
 
   <section class="projects" id="projects"> <!-- Projects section -->
-      <h1>Projects</h1>
-      <p>Here are some of the projects I've worked on:</p>
-      <div class="project-card">
-      <img src="images/project1.jpg" alt="Project 1 Image" class="project-image">
-      <h2>Project 1: Portfolio Website</h2>
-      <p>Tech stack :Html CSS JavaScript</p> 
-      <p>My personal portfolio website where I showcase my skills and projects.</p>
-      </div>
-      <div class="project-card">
-      <img src="images/project2.jpg" alt="Project 2 Image" class="project-image">
-      <h2>Project 2: Event-Finder Website</h2>
-      <p>Tech stack : Html Java </p>
-      <p>A team project : A website that helps Egerton students find and stay up to date with upcoming school events </p>
-      </div>
-      <div class="project-card">
-      <img src="images/project3.jpg" alt="Project 3 Image" class="project-image">
-      <h2>Project 3: Egerbay Website</h2>
-      <p>Tech stack : Html CSS JavaScript</p>
-      <p>A team project : An E-market website that allows Egerton students to buy goods available within the school.</p>
+   <h1>Projects</h1>
+   <p>Here are some of the projects I've worked on:</p>
+   <div class="filter-buttons">
+     <button onclick="filterProjects('all')">All</button>
+     <button onclick="filterProjects('web')">Web</button>
+     <button onclick="filterProjects('team')">Team</button>
+     <button onclick="filterProjects('java')">Java</button>
+     <button onclick="filterProjects('javaScript')">JavaScript</button>
+   </div>
+
+      <div class="project-grid">
+        <div class="project-card" data-category="web javaScript">
+          <img src="images/project1.jpg" alt="Project 1 Image" class="project-image">
+          <h2>Project 1: Portfolio Website</h2>
+          <p>Tech stack :Html CSS JavaScript</p> 
+          <p>My personal portfolio website where I showcase my skills and projects.</p>
+        </div>
+        <div class="project-card" data-category="team java">
+          <img src="images/project2.jpg" alt="Project 2 Image" class="project-image">
+          <h2>Project 2: Event-Finder Website</h2>
+          <p>Tech stack : Html Java </p>
+          <p>A team project : A website that helps Egerton students find and stay up to date with upcoming school events </p>
+        </div>
+        <div class="project-card" data-category="web team javaScript">
+          <img src="images/project3.jpg" alt="Project 3 Image" class="project-image">
+          <h2>Project 3: Egerbay Website</h2>
+          <p>Tech stack : Html CSS JavaScript</p>
+          <p>A team project : An E-market website that allows Egerton students to buy goods available within the school.</p>
+        </div>
       </div>
   </section>
 
@@ -71,27 +83,47 @@
     </div>
   </section>
 
-  <section class="contacts"id="contacts"><!-- Contacts section -->
-    <h1>Contacts</h1>
-    <p>If you'd like to get in touch, you can reach me at:</p>
-    <div class="socials">
-       <img src="images/phone.jpg" alt="Phone Image" class="socials-image">
-       <p>Phone: 0111390052</p>
-    </div>
-    <div class="socials">
-       <img src="images/whatsapp.jpg" alt="whatsapp Image" class="socials-image">
-       <p>WhatsApp: 0111390052</p>
-    </div>
-    <div class="socials">
-       <img src="images/email.jpg" alt="Email Image" class="socials-image">
-       <p>Email:mwangijoy06@gmail.com</p>
-    </div>
-  
-  </section>
+ <section class="contacts" id="contacts">
+   <h1>Contact Me</h1>
+   <p>If you'd like to get in touch, feel free to send me a message below:</p>
+   <form id="contactForm" class="contact-form" onsubmit="return validateForm()">
+     <label for="name">Name</label>
+     <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-  <footer>
-  <p>&copy; 2025 Joy's Portfolio. All rights reserved.</p>
-  </footer>
-<script src="js/script.js"></script>
+     <label for="email">Email</label>
+     <input type="email" id="email" name="email" placeholder="Your@email.com" required>
+
+     <label for="message">Message</label>
+     <textarea id="message" name="message" placeholder="Your message" required></textarea>
+
+     <button type="submit" aria-label="Send Message">
+     <i class="fas fa-paper-plane"></i> </button>
+   </form>
+   <p id="formMessage" style="margin-top: 1rem;"></p>
+ </section>
+
+
+ <footer>
+   <div class="footer-contacts">
+     <div class="footer-social">
+       <i class="fas fa-phone-alt"></i>
+       <span>0111390052</span>
+     </div>
+     <div class="footer-social">
+       <i class="fab fa-whatsapp"></i>
+       <span>0111390052</span>
+     </div>
+     <div class="footer-social">
+       <i class="fas fa-envelope"></i>
+       <span>mwangijoy06@gmail.com</span>
+     </div>
+   </div>
+
+   <p>&copy; 2025 Joy's Portfolio. All rights reserved. | Developed by Joy Mwangi</p>
+   <a href="#top">Back to top ↑</a>
+ </footer>
+
+
+  <script src="js/script.js"></script>
 </body>
 </html>
