@@ -2,12 +2,27 @@
 <html lang="en">
 
 <head>
-   <title>Joy's Portfolio</title>
+   <!-- SEO Meta Tags -->
+   <title>Joy Mwangi | Web Developer Portfolio</title>
+   <meta name="description" content="Portfolio of Joy Mwangi - A computer science student and web developer showcasing projects, skills and resume.">
+   <meta name="keywords" content="Joy Mwangi, web developer, portfolio, HTML, CSS, JavaScript, Egerton University, frontend, resume">
+   <meta name="author" content="Joy Wambui Mwangi">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Open Graph Meta Tags (for Facebook, WhatsApp, LinkedIn) -->
+   <meta property="og:title" content="Joy Mwangi | Web Developer Portfolio">
+   <meta property="og:description" content="Explore Joy's projects, resume, and web development skills.">
+   <meta property="og:image" content="images/preview.png">
+   <meta property="og:url" content="https://your-github-pages-link.github.io/"><!-- replace with gplink -->
+   <meta property="og:type" content="website">
+
+   <link rel="icon" type="image/png" href="images/favicon.png">
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!-- AOS Animate On Scroll CSS -->
    <link rel="stylesheet" href="css/style.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
    <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
   <header>
     <div class="nav-wrapper">
@@ -21,7 +36,7 @@
     </div>
   </header>
 
- <section class="about" id="about"> <!-- About Me section -->
+ <section class="about" id="about" data-aos="fade-down"> <!-- About Me section -->
     <img src="images/profilePhoto.jpg" alt="Joy's Photo" class="profile-photo">
     <h1>About Me</h1>
     <p>Hi, I'm Joy! I'm a computer science student with a passion for creating innovative solutions. I love coding, learning new technologies, and collaborating with others to build amazing projects.
@@ -31,7 +46,7 @@
     <p>Feel free to reach out.</p>
  </section>
 
-  <section class="projects" id="projects"> <!-- Projects section -->
+  <section class="projects" id="projects" data-aos="fade-down"> <!-- Projects section -->
    <h1>Projects</h1>
    <p>Here are some of the projects I've worked on:</p>
    <div class="filter-buttons">
@@ -64,7 +79,7 @@
       </div>
   </section>
 
-  <section class="skills" id="skills"> <!-- Skills section -->
+  <section class="skills" id="skills" data-aos="fade-down"> <!-- Skills section -->
     <h1>Skills</h1>
     <p>Here are some of the skills I have acquired:</p>
     <ul class="skills-list">
@@ -75,7 +90,7 @@
     </ul>
   </section> 
 
-  <section class="resume"id="resume"> <!-- Resume section -->
+  <section class="resume"id="resume" data-aos="fade-down"> <!-- Resume section -->
     <h1>Resume</h1>
    <div class="resume-content">
       <p>Download my resume to learn more about my skills and experience.</p>
@@ -83,7 +98,7 @@
     </div>
   </section>
 
- <section class="contacts" id="contacts">
+ <section class="contacts" id="contacts" data-aos="fade-down">
    <h1>Contact Me</h1>
    <p>If you'd like to get in touch, feel free to send me a message below:</p>
    <form id="contactForm" class="contact-form" onsubmit="return validateForm()">
@@ -106,6 +121,7 @@
  <footer>
    <div class="footer-contacts">
      <div class="footer-social">
+
        <i class="fas fa-phone-alt"></i>
        <span>0111390052</span>
      </div>
@@ -123,6 +139,14 @@
    <a href="#top">Back to top ↑</a>
  </footer>
 
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init({
+     duration: 1000,  // animation duration in ms
+     once: false     // animate on each scroll
+     });
+   </script>
 
   <script src="js/script.js"></script>
 </body>

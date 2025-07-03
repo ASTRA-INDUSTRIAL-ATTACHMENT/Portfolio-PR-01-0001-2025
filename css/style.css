@@ -2,6 +2,7 @@ body {
  margin: 0;
  font-family: 'Poppins', sans-serif;
  background-color: transparent;
+ padding: 8rem;
  color: #111;
  background-image:url('/images/background-light.jpg'); 
  background-size: cover;
@@ -15,6 +16,22 @@ body.dark {
  background-position: center;
  background-repeat: no-repeat;
 }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; 
+  background-color: #436de282;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px #0000001a;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+
 
 .nav-wrapper {
   display: flex;
@@ -46,6 +63,7 @@ body.dark {
   border: none;
   border-radius: 10px;
   font-size: 1rem;
+  color: #111;
   background-color: transparent;
   cursor: pointer;
 }
@@ -308,7 +326,64 @@ footer a:hover {
 }
 
 /* Responsive Styles */
-@media (min-width: 768px) {
+/*responsive styles for a mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+  
+  body {
+    padding-top: 8rem;
+    padding: 0.5rem;
+  }
+
+  header {
+   position: static;
+   height: auto;
+   padding: none;
+   background-color: transparent;
+   box-shadow: none;
+  }
+
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.5rem;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  .nav-btn {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .about, .projects, .skills, .resume, .contacts {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*responsive styles for a tablet */
+@media (min-width: 768px)and (max-width: 1023px) {
+  header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; 
+  background-color: #436de282;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px #0000001a;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -322,8 +397,21 @@ footer a:hover {
     font-size: 1.05rem;
   }
 }
-
+/*responsive styles for a desktop */
 @media (min-width: 1024px) {
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; 
+  background-color: #436de282;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px #0000001a;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
   .project-grid {
     grid-template-columns: repeat(3, 1fr);
   }
