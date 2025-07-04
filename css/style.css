@@ -47,7 +47,7 @@ header {
 }
 .menu-item {
   display: flex;
-  align-items: left;
+  align-items: center;
   gap: 1rem;
 }
 .nav-btn {
@@ -329,7 +329,7 @@ footer a:hover {
   header {
    position: static;
    height: auto;
-   padding: none;
+   padding: 0;
    background-color: transparent;
    box-shadow: none;
   }
