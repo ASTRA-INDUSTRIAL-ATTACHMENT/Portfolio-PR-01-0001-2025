@@ -4,17 +4,11 @@ body {
  background-color: transparent;
  padding: 8rem;
  color: #111;
- background-image:url('/images/background-light.jpg'); 
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
+ background-color: #91b1f2; 
  gap: 1rem;
 }
 body.dark {
- background-image:url('/images/background-dark.jpg'); 
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
+ background-color: #223770; 
 }
 
 header {
