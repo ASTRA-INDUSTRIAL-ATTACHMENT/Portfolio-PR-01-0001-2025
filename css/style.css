@@ -1,14 +1,13 @@
 body {
  margin: 0;
  font-family: 'Poppins', sans-serif;
- background-color: transparent;
  padding: 8rem;
  color: #111;
- background-color:#5997f3; 
+ background-color:#cacaca; 
  gap: 1rem;
 }
 body.dark {
- background-color: #223770; 
+ background-color: #10131c; 
 }
 
 header {
@@ -17,12 +16,13 @@ header {
   left: 0;
   width: 100%;
   height: 60px; 
-  background-color: #4a4afde6;
+  background-color: #bbb9b9;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px #0000001a;
   z-index: 1000;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-wrapper {
@@ -33,7 +33,7 @@ header {
 }
 
 .dark header {
-  background-color: transparent;
+  background-color: #1c1c2e;
   color: #f9f9f9;
 }
 
@@ -58,6 +58,7 @@ header {
   color: #111;
   background-color: transparent;
   cursor: pointer;
+  text-decoration: none;
 }
 .nav-btn:hover {
   transform: scale(1.30);
@@ -79,7 +80,7 @@ header {
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 10px;
-  background-color:transparent;
+  background-color: #bbb9b9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .about:hover,
@@ -87,8 +88,8 @@ header {
 .skills:hover,
 .resume:hover,
 .contacts:hover {
-  background-color: #4046ed2d;
-  transform: scale(1.02);
+  background-color: #a4a4a8dc;
+  transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
 }
 
@@ -97,7 +98,7 @@ header {
 .dark .skills,
 .dark .resume,
 .dark .contacts {
-  background-color: transparent;
+  background-color: #1c1c2e;
   color: #fff;
 }
 
@@ -120,7 +121,7 @@ header {
 }
 
 .filter-buttons button:hover {
-  background-color: #4046ed2d;
+  background-color: #a4a4a8dc;
   transform: scale(1.30);
 }
 .dark .filter-buttons button {
@@ -138,13 +139,12 @@ header {
   display: flex;
   flex-direction: column;
   color: #443a3a;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .project-card:hover {
- background-color: #3339eb32;
+ background-color: #a4a4a8dc;
  transform: scale(1.04);
  box-shadow: 0 4px 10px rgba(13, 13, 13, 0.2);
 }
@@ -183,12 +183,9 @@ header {
 }
 
 .contact-form {
-  max-width: 600px;
-  margin: 2rem auto 0;
+  margin: 0;
   background: transparent;
-  padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -243,17 +240,11 @@ header {
   margin-top: 0.5rem;
 }
 
-.dark .contact-form {
-  background-color: #1c1c2e;
-  color: #f0f0f0;
-  border: 1px solid #333;
-}
 
 .dark .contact-form input,
 .dark .contact-form textarea {
   background-color: #2a2a3e;
   color: white;
-  border: 1px solid #444;
 }
 
 .dark .contact-form input:focus,
@@ -268,6 +259,11 @@ header {
 
 .dark .contact-form button:hover {
   background-color: #8897ff;
+}
+.dark .contact-form label {
+  font-weight: 600;
+  color: #fbf9f9;
+  margin-bottom: 0.25rem;
 }
 
 
@@ -333,6 +329,9 @@ footer a:hover {
    background-color: transparent;
    box-shadow: none;
   }
+  .dark header{
+   background-color: transparent;
+  }
 
   .nav-wrapper {
     flex-direction: column;
@@ -361,49 +360,13 @@ footer a:hover {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-/*responsive styles for a tablet */
-@media (min-width: 768px)and (max-width: 1023px) {
-  header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px; 
-  background-color: #436de282;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px #0000001a;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-}
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+/*responsive styles for a tablet and a desktop */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding-top: 8rem;
+    padding: 2rem;
   }
 
-  .about, .projects, .skills, .resume, .contacts {
-    width: 70%;
-  }
-
-  .nav-btn {
-    padding: 1rem 1.5rem;
-    font-size: 1.05rem;
-  }
-}
-/*responsive styles for a desktop */
-@media (min-width: 1024px) {
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px; 
-  background-color: #436de282;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px #0000001a;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-}
   .project-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -416,5 +379,6 @@ header {
     padding: 1.2rem 2rem;
     font-size: 1.2rem;
   }
+  
 }
 
